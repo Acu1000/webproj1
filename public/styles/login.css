@@ -1,4 +1,4 @@
-body {
+/*body {
     justify-content: center;
     align-items: center;
 }
@@ -11,4 +11,95 @@ form {
     border-radius: 1rem;
     width: 45vw;
     padding: 1rem;
+}*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  background: #ffe9e9;
+  color: #a33;
+  padding: 10px 15px;
+  border: 1px solid #f5c2c2;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* heading */
+form h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+form input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+form input:focus {
+  border-color: #4a82f0;
+  box-shadow: 0 0 4px rgba(74, 130, 240, 0.4);
+  outline: none;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #4a82f0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+form button:hover {
+  background: #3a6ed1;
+}
+
+form button:active {
+  transform: scale(0.98);
+}
+
+form[action="/register"] {
+  margin-top: 10px;
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+}
+
+form[action="/register"] button {
+  width: 320px;
+  background: #e0e5ee;
+  color: #333;
+}
+
+form[action="/register"] button:hover {
+  background: #cbd3df;
 }

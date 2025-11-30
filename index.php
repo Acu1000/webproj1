@@ -8,14 +8,23 @@ $path = parse_url($path, PHP_URL_PATH);
 
 $router = new Router();
 
-// TODO Controller singletons
 $router->get('/login', function() {
-    $controller = new SecurityController();
+    $controller = SecurityController::getInstance();
+    $controller->displayLogin();
+});
+
+$router->post('/login', function() {
+    $controller = SecurityController::getInstance();
     $controller->login();
 });
 
 $router->get('/register', function() {
-    $controller = new SecurityController();
+    $controller = SecurityController::getInstance();
+    $controller->displayRegister();
+});
+
+$router->post('/register', function() {
+    $controller = SecurityController::getInstance();
     $controller->register();
 });
 

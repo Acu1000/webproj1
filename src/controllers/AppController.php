@@ -1,9 +1,10 @@
 <?php
 
+require_once 'Singleton.php';
 
-class AppController {
+class AppController extends Singleton {
 
-    protected function render(string $template = null, array $variables = [])
+    protected function render(?string $template = null, array $variables = []): void
     {
         $templatePath = 'public/views/'. $template.'.html';
         $templatePath404 = 'public/views/404.html';
